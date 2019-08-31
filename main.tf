@@ -168,6 +168,7 @@ data "template_file" "make_broker_config" {
 }
 
 resource "null_resource" "setup_broker" {
+  depends_on = [alicloud_disk_attachment.ecs_disk_att]
   count = 3
   provisioner "remote-exec" {
     connection {
