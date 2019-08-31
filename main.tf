@@ -178,6 +178,7 @@ resource "null_resource" "setup_broker" {
     }
     inline = [
       "mkfs.xfs /dev/vdb",
+      "mkdir /data",
       "mount /dev/vdb /data",
       file("./add_docker.sh"),
       data.template_file.make_broker_config.*.rendered[count.index],
