@@ -1,0 +1,1 @@
+docker run -d -p 9876:9876 ${rktmq_image} ./mqnamesrv
