@@ -1,7 +1,11 @@
 create terraform.tfvars and provide all variables.
+
 az means availability_zone, we must provide three zones in same region.
+
 broker_image_id, namesvr_image_id, pressure_image_id means alicloud ecs image id, which I recommend "centos_7_06_64_20G_alibase_20190711.vhd"
+
 rktmq_image means rocketmq docker image id, which I recommend "uhub.service.ucloud.cn/lonegunmanb/rocketmq:4.5.1"
+
 open_ports are security group open port rules, which I recommend at least:
 ```hcl
 intranet_open_ports = [9876, 30911, 30909, 40911]
@@ -13,6 +17,7 @@ terraform init
 terraform apply --auto-approve
 ```
 when finished, terraform will output three brokers' public ips, name server's public ip and pressure test runner's public ip
+
 ssh to pressure_ip
 
 ```shell script
