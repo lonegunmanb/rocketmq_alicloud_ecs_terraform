@@ -21,7 +21,7 @@ when finished, terraform will output three brokers' public ips, name server's pu
 ssh to pressure_ip
 
 ```shell script
-cd rocketmq-all-4.4.0-bin-release/bin
+cd rocketmq-all-4.4.0-bin-release
 ```
 
 then you can run a simple test to check whether the cluster is working fine:
